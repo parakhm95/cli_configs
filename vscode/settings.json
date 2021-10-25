@@ -1,0 +1,19 @@
+{
+    "cmake.configureOnOpen": false,
+    "C_Cpp.clang_format_fallbackStyle": "LLVM",
+    "C_Cpp.clang_format_style": "LLVM",
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.formatOnSave": true,
+    "clang-tidy.checks":  [
+        "-*", 
+        "google-*", 
+        "cppcoreguidelines-*", 
+        "clang-*", 
+        "readability-*", 
+        "-cppcoreguidelines-pro-bounds-constant-array-index"
+        ],
+    "clang-tidy.buildPath": "/home/max/ma/workspaces/simws/build/solver_ipft/clang-tidy",
+    "files.associations": {
+        "variant": "cpp"
+    },
+}
