@@ -12,3 +12,10 @@ alias gs="git status"
 alias gd="git diff"
 alias stwt="rosservice call /uav1/control_manager/switch_tracker waterbird_tracker"
 alias ods="/home/octo/Documents/mrs_ws/src/simulation/example_tmux_scripts/one_drone_gps/start.sh"
+alias fuck='sudo $(history -p !!)'
+alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches"
+alias flog="/home/pmg/git/cli_configs/ubuntu/git-forest.sh --all --date=relative --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --style=15"
+alias display_on="source /home/pmg/standard_display_layout_pmg.sh"
+alias display_off="xrandr --output DP-1-1-3 --off --output DP-1-1-2 --off"
+alias r="ranger"
+xset r rate 240 70
