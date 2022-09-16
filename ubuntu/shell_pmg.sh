@@ -18,3 +18,4 @@ xset r rate 240 70
 alias home_on="xrandr --output eDP-1-1 --primary --mode 1920x1200 --pos 0x0 --rotate normal --output DP-1-1 --off --output DP-1-2 --off --output DP-1-3 --mode 2560x1440 --rate 164.80 --pos 1920x0 --rotate normal --set \"Broadcast RGB\" \"Full\" --output DP-1-1-1 --off --output DP-1-1-2 --off --output DP-1-1-3 --off"
 alias home_off="xrandr --output DP-1-3 --off"
 alias second-brain="cd ~/git/second-brain"
+export PS1="[\e[1;32m\u\e[0m|\e[1;34m\W\e[0m]\e[1;31m\$ \e[0m"
