@@ -1,6 +1,6 @@
 
-alias ctb="catkin build"
-alias cbt="catkin build --this"
+alias cbt="catkin build --this && source /home/pmg/git/cli_configs/ubuntu/merge_compile_commands_json.sh"
+alias ctb="catkin build && source /home/pmg/git/cli_configs/ubuntu/merge_compile_commands_json.sh"
 alias snb="sudo nano ~/.bashrc"
 alias sb="source ~/.bashrc"
 alias smw="source ~/Documents/mrs_ws/devel/setup.bash"
@@ -19,3 +19,6 @@ alias home_on="xrandr --output eDP-1-1 --primary --mode 1920x1200 --pos 0x0 --ro
 alias home_off="xrandr --output DP-1-3 --off"
 alias second-brain="cd ~/git/second-brain"
 export PS1="[\e[1;32m\u\e[0m|\e[1;34m\W\e[0m]\e[1;31m\$ \e[0m"
+
+eval `keychain --eval parakh`
+setxkbmap -option caps:swapescape
