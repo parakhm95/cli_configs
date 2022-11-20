@@ -1,4 +1,5 @@
 
+alias ods="source ~/mrs_workspace/src/simulation/example_tmux_scripts/one_drone_gps/start.sh"
 alias cbt="catkin build --this && source /home/pmg/git/cli_configs/ubuntu/merge_compile_commands_json.sh"
 alias ctb="catkin build && source /home/pmg/git/cli_configs/ubuntu/merge_compile_commands_json.sh"
 alias snb="sudo nano ~/.bashrc"
