@@ -1,0 +1,4 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/pmg/Documents/offshore_ws/src/boat_landing_pkgs/usv_estiplan'
+let g:netrw_dirhist_1='/home/pmg/.config/i3'

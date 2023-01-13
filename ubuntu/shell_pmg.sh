@@ -22,4 +22,4 @@ alias second-brain="cd ~/git/second-brain"
 # export PS1="[\e[1;32m\u\e[0m|\e[1;34m\W\e[0m]\e[1;31m\$ \e[0m"
 
 eval `keychain --eval parakh`
-setxkbmap -option caps:swapescape
+setxkbmap -option caps:escape

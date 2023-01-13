@@ -34,6 +34,7 @@ exec --no-startup-id safeeyes
 exec --no-startup-id blueman-applet
 exec --no-startup-id mailspring
 exec --no-startup-id teams
+exec --no-startup-id obsidian
 # exec --no-startup-id firefox
 # exec --no-startup-id i3-sensible-terminal
 
@@ -223,9 +224,11 @@ bindsym Mod4+l focus output right
 # assign [class="firefox"] workspace number $ws2
 assign [class="Microsoft Teams - Preview"] workspace number $ws9
 assign [class="Mailspring"] workspace number $ws9
+assign [class="obsidian"] workspace number $ws9
 # assign [class="Gnome-terminal"] workspace number $ws1
 exec --no-startup-id i3-msg 'workspace $ws9; exec teams'
 exec --no-startup-id i3-msg 'workspace $ws9; exec mailspring'
+exec --no-startup-id i3-msg 'workspace $ws9; exec obsidian'
 exec --no-startup-id i3-msg 'workspace $ws2; exec firefox'
 exec --no-startup-id i3-msg 'workspace $ws1; exec gnome-terminal'
 bindsym $mod+F2 [class="firefox"] focus
