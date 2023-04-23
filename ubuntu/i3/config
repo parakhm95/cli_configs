@@ -14,7 +14,7 @@ set $mod Mod1
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font pango:Terminus 10
-font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 10
+font pango:DejaVu Sans Mono, Terminus Semi-Condensed 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -33,7 +33,6 @@ exec --no-startup-id nm-applet
 exec --no-startup-id safeeyes
 exec --no-startup-id blueman-applet
 exec --no-startup-id mailspring
-exec --no-startup-id teams
 exec --no-startup-id obsidian
 # exec --no-startup-id firefox
 # exec --no-startup-id i3-sensible-terminal
@@ -189,7 +188,18 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        # output primary
+        output eDP-1-1
+        position top
+        status_command i3status
+	    tray_output primary
+        status_command exec /home/pmg/.config/i3status/net-speed.sh
+        font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 10
+        # font pango:DejaVu Sans Mono Bold 10
+}
+
+bar {
+        output DP-1-3
+        output DP-1-1-2
         position top
         status_command i3status
 	    tray_output primary
@@ -204,7 +214,7 @@ bar {
         # status_command i3status
 	    # tray_output primary
         # status_command exec /home/pmg/.config/i3status/net-speed.sh
-        font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 11
+        font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 10
         # font pango:DejaVu Sans Mono Bold 10
 }
 
@@ -226,10 +236,20 @@ assign [class="Microsoft Teams - Preview"] workspace number $ws9
 assign [class="Mailspring"] workspace number $ws9
 assign [class="obsidian"] workspace number $ws9
 # assign [class="Gnome-terminal"] workspace number $ws1
-exec --no-startup-id i3-msg 'workspace $ws9; exec teams'
 exec --no-startup-id i3-msg 'workspace $ws9; exec mailspring'
 exec --no-startup-id i3-msg 'workspace $ws9; exec obsidian'
+exec --no-startup-id i3-msg 'workspace $ws9; exec zotero'
 exec --no-startup-id i3-msg 'workspace $ws2; exec firefox'
 exec --no-startup-id i3-msg 'workspace $ws1; exec gnome-terminal'
 bindsym $mod+F2 [class="firefox"] focus
 bindsym $mod+F1 [class="Microsoft Teams - Preview"] focus
+
+# Screenshots
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
+
+## Clipboard Screenshots
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png

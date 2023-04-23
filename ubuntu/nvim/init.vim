@@ -21,6 +21,9 @@ Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 Plug 'navarasu/onedark.nvim'
 Plug 'EdenEast/nightfox.nvim' " Vim-Plug
 Plug 'bling/vim-bufferline'
+Plug 'tpope/vim-fugitive'
+Plug 'nvim-treesitter/nvim-treesitter-context' 
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 call plug#end()
 
@@ -40,7 +43,7 @@ let g:coc_global_extensions = [
             \'coc-clangd',
             \'coc-cmake',
             \'coc-markdownlint',
-            \'coc-python',
+            \'coc-pyright',
             \'coc-sh',
             \'coc-texlab',
             \'coc-yaml',

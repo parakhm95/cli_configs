@@ -23,3 +23,4 @@ alias second-brain="cd ~/git/second-brain"
 
 eval `keychain --eval parakh`
 setxkbmap -option caps:escape
+alias weather="curl wttr.in/Prague"

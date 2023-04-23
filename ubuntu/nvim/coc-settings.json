@@ -1,4 +1,11 @@
 {
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.3/clangd_15.0.3/bin/clangd",
-  "clangd.compilationDatabaseCandidates": ["/home/pmg/Documents/offshore_ws/src","/home/pmg/Documents/offshore_ws/build"]
+  "clangd.compilationDatabaseCandidates": [
+    "/home/pmg/Documents/offshore_ws/src",
+    "/home/pmg/Documents/offshore_ws/build"
+  ],
+  "clangd.arguments": ["--header-insertion=never"],
+  "python.formatting.provider": "autopep8",
+  "python.formatting.autopep8Path": "~/.local/bin/autopep8",
+  "coc.preferences.formatOnSave": false
 }
