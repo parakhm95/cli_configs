@@ -24,6 +24,9 @@ Plug 'bling/vim-bufferline'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-treesitter/nvim-treesitter-context' 
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'nvim-lualine/lualine.nvim'
+" If you want to have icons in your statusline choose one of these
+Plug 'nvim-tree/nvim-web-devicons'
 
 call plug#end()
 
