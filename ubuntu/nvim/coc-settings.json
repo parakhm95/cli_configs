@@ -7,5 +7,8 @@
   "clangd.arguments": ["--header-insertion=never"],
   "python.formatting.provider": "autopep8",
   "python.formatting.autopep8Path": "~/.local/bin/autopep8",
-  "coc.preferences.formatOnSave": false
+  "coc.preferences.formatOnSave": false,
+  "markdownlint.config": {
+    "line_length": false
+  }
 }

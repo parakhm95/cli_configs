@@ -11,8 +11,8 @@ alias gd="git diff"
 alias fuck='sudo $(history -p !!)'
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches"
 alias flog="/home/pmg/git/cli_configs/ubuntu/git-forest.sh --all --date=relative --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --style=15"
-alias office_off="xrandr --output DP-1-1-3 --off --output DP-1-1-2 --off --output eDP-1-1 --primary"
-alias office_on="xrandr --output eDP-1-1 --mode 1920x1200 --pos 3000x183 --rotate normal --output DP-1-1 --off --output DP-1-2 --off --output DP-1-3 --off --output DP-1-1-1 --off --output DP-1-1-2 --primary --mode 1920x1080 --pos 1080x243 --rotate normal --set \"Broadcast RGB\" \"Full\" --output DP-1-1-3 --mode 1920x1080 --pos 0x0 --rotate left --set \"Broadcast RGB\" \"Full\""
+alias office_off="xrandr --output DP-1-1-3 --off --output DP-1-1-2 --off --output eDP-1-1 --primary --dpi 100"
+alias office_on="xrandr --output eDP-1-1 --mode 1920x1200 --pos 3000x183 --rotate normal --dpi 100 --output DP-1-1 --off --output DP-1-2 --off --output DP-1-3 --off --output DP-1-1-1 --off --output DP-1-1-2 --primary --mode 1920x1080 --dpi 100 --pos 1080x243 --rotate normal --dpi 100 --set \"Broadcast RGB\" \"Full\" --output DP-1-1-3 --mode 1920x1080 --pos 0x0 --rotate left --set \"Broadcast RGB\" \"Full\""
 alias r=". ranger"
 alias ra=". ranger"
 xset r rate 240 70

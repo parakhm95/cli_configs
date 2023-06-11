@@ -8,6 +8,9 @@ set smartindent
 set relativenumber
 set scrolloff=8
 set termguicolors
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+set nofoldenable                     " Disable folding at startup.
 
 call plug#begin()
 
@@ -27,6 +30,8 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
 Plug 'nvim-tree/nvim-web-devicons'
+Plug 'numToStr/Comment.nvim'
+
 
 call plug#end()
 
@@ -67,7 +72,8 @@ nnoremap <leader>ff <cmd>Telescope current_buffer_fuzzy_find<cr>
 nnoremap <leader>oo <cmd>CocCommand clangd.switchSourceHeader<cr>
 nnoremap J <cmd>bprevious<cr>
 nnoremap K <cmd>bn<cr>
-nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeFind<CR>
+nnoremap <leader>cd :lcd %:h<CR>
 
 nnoremap <expr> j v:count ? 'j' : 'gj'
 nnoremap <expr> k v:count ? 'k' : 'gk'
@@ -78,3 +84,4 @@ lua require('pmg')
 
 syntax on
 colorscheme carbonfox
+" colorscheme dayfox
