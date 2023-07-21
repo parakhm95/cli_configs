@@ -73,6 +73,7 @@ nnoremap <leader>oo <cmd>CocCommand clangd.switchSourceHeader<cr>
 nnoremap J <cmd>bprevious<cr>
 nnoremap K <cmd>bn<cr>
 nnoremap <leader>n :NERDTreeFind<CR>
+nnoremap <leader>nc :NERDTreeClose<CR>
 nnoremap <leader>cd :lcd %:h<CR>
 
 nnoremap <expr> j v:count ? 'j' : 'gj'
