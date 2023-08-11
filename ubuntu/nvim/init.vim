@@ -11,6 +11,7 @@ set termguicolors
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 set nofoldenable                     " Disable folding at startup.
+set ignorecase smartcase
 
 call plug#begin()
 
@@ -31,6 +32,8 @@ Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'numToStr/Comment.nvim'
+Plug 'goolord/alpha-nvim'
+Plug 'github/copilot.vim'
 
 
 call plug#end()
@@ -76,8 +79,8 @@ nnoremap <leader>n :NERDTreeFind<CR>
 nnoremap <leader>nc :NERDTreeClose<CR>
 nnoremap <leader>cd :lcd %:h<CR>
 
-nnoremap <expr> j v:count ? 'j' : 'gj'
-nnoremap <expr> k v:count ? 'k' : 'gk'
+noremap <expr> j v:count ? 'j' : 'gj'
+noremap <expr> k v:count ? 'k' : 'gk'
 xnoremap("<leader>p", "\"_dP")
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
