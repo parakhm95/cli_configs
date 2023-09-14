@@ -54,7 +54,6 @@ let g:coc_global_extensions = [
             \'coc-clangd',
             \'coc-cmake',
             \'coc-markdownlint',
-            \'coc-pyright',
             \'coc-sh',
             \'coc-texlab',
             \'coc-yaml',
@@ -78,9 +77,14 @@ nnoremap K <cmd>bn<cr>
 nnoremap <leader>n :NERDTreeFind<CR>
 nnoremap <leader>nc :NERDTreeClose<CR>
 nnoremap <leader>cd :lcd %:h<CR>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 noremap <expr> j v:count ? 'j' : 'gj'
 noremap <expr> k v:count ? 'k' : 'gk'
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 xnoremap("<leader>p", "\"_dP")
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p

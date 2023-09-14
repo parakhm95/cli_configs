@@ -205,6 +205,7 @@ bar {
 
 bar {
         output DP-1-2
+        output DisplayPort-3
         position top
         status_command i3status
 	    tray_output primary
@@ -237,6 +238,9 @@ bindsym $mod+Ctrl+less move workspace to output left
 bindsym $mod+Ctrl+Up move workspace to output up
 bindsym Mod4+h focus output left
 bindsym Mod4+l focus output right
+bindsym Mod4+j focus output up
+bindsym Mod4+k focus output down
+
 
 # assign [class="firefox"] workspace number $ws2
 assign [class="Microsoft Teams - Preview"] workspace number $ws9
