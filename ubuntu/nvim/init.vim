@@ -91,5 +91,5 @@ autocmd VimEnter * NERDTree | wincmd p
 lua require('pmg')
 
 syntax on
-colorscheme carbonfox
-" colorscheme dayfox
+" colorscheme carbonfox
+colorscheme dayfox
