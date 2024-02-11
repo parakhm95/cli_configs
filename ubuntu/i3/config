@@ -34,18 +34,19 @@ exec --no-startup-id nm-applet
 exec --no-startup-id safeeyes
 exec --no-startup-id indicator-sound-switcher
 exec --no-startup-id blueman-applet
-exec --no-startup-id mailspring
+exec --no-startup-id mailspring --password-store="gnome-libsecret"
 exec --no-startup-id obsidian
 # exec --no-startup-id firefox
 # exec --no-startup-id i3-sensible-terminal
 
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5 && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5 && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+# set $refresh_i3status killall -SIGUSR1 i3status
+set $refresh_i3blocks pkill -RTMIN+10 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5 && $refresh_i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5 && $refresh_i3blocks
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3blocks
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3blocks
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -195,9 +196,9 @@ bar {
         output eDP-1
         output primary
         position top
-        status_command i3status
+        status_command i3blocks
 	    tray_output primary
-        status_command exec /home/pmg/.config/i3status/net-speed.sh
+        # status_command exec /home/pmg/.config/i3status/net-speed.sh
         font pango:RobotoMono Nerd Font Propo Semi-Bold 9
         # font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 10
         # font pango:DejaVu Sans Mono Bold 10
@@ -205,11 +206,11 @@ bar {
 
 bar {
         output DP-1-2
-        output DisplayPort-3
+        output DisplayPort-1
         position top
-        status_command i3status
+        status_command i3blocks
 	    tray_output primary
-        status_command exec /home/pmg/.config/i3status/net-speed.sh
+        # status_command exec /home/pmg/.config/i3status/net-speed.sh
         font pango:RobotoMono Nerd Font Propo Semi-Bold 9
        #  font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 10
         # font pango:DejaVu Sans Mono Bold 10

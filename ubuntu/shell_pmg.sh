@@ -9,7 +9,8 @@ alias gs="git status"
 alias gd="git diff"
 alias gp="git push"
 alias gds="git diff --staged"
-alias fuck='sudo $(history -p !!)'
+# alias fuck='sudo $(history -p !!)'
+alias fuck='sudo $(fc -e -)'
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches"
 alias flog="/home/pmg/git/cli_configs/ubuntu/git-forest.sh --all --date=relative --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --style=15"
 alias office_off="xrandr --output DisplayPort-3 --off --output DisplayPort-4 --off --output eDP --primary --dpi 100"
