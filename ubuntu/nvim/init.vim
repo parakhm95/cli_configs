@@ -98,3 +98,20 @@ colorscheme carbonfox
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" Switch dark and light mode tmux
+function! Toggle_Light_Dark_Colorscheme()
+    if system('echo $LIGHT_MODE')[0:4] == 'LIGHT'
+        :silent :!export LIGHT_MODE='DARK'
+        :colorscheme carbonfox
+        " :silent :!tmux source-file ~/.tmux_light.conf
+    else
+        :silent :!export LIGHT_MODE='LIGHT'
+        :colorscheme dayfox
+        " :silent :!tmux set-environment THEME 'dark'
+        " :silent :!tmux source-file ~/.tmux_dark.conf
+    endif
+    " :call SetColorScheme()
+endfunction
+
+nnoremap <leader>cs :call Toggle_Light_Dark_Colorscheme()<cr>

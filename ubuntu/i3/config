@@ -197,6 +197,7 @@ bar {
         output primary
         position top
         status_command i3blocks
+        # status_command i3status
 	    tray_output primary
         # status_command exec /home/pmg/.config/i3status/net-speed.sh
         font pango:RobotoMono Nerd Font Propo Semi-Bold 9
@@ -207,8 +208,10 @@ bar {
 bar {
         output DP-1-2
         output DisplayPort-1
+        output DisplayPort-3
         position top
         status_command i3blocks
+        # status_command i3status
 	    tray_output primary
         # status_command exec /home/pmg/.config/i3status/net-speed.sh
         font pango:RobotoMono Nerd Font Propo Semi-Bold 9

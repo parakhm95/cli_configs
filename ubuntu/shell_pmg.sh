@@ -1,4 +1,5 @@
 alias cbt="catkin build --this && source /home/pmg/git/cli_configs/ubuntu/merge_compile_commands_json.sh"
+alias cct="catkin clean --this"
 alias ctb="catkin build && source /home/pmg/git/cli_configs/ubuntu/merge_compile_commands_json.sh"
 alias nb="nvim ~/.zshrc && source ~/.zshrc"
 alias nc="nvim ~/git/cli_configs/ubuntu && source ~/.zshrc"
@@ -30,4 +31,8 @@ export VISUAL="nvim"
 export EDITOR="nvim"
 # PS1="%n@%m %1~ %#"
 PROMPT='%B%F{51}%n@%m%f%b %3d :~$ '
-
+# alias tmux="tmux -f /home/pmg/git/cli_configs/ubuntu/tmux/.tmux.conf"
+# alias ltbl="tmux source-file /home/pmg/git/cli_configs/ubuntu/tmux/tmux-gruvbox-light.conf; tmux set-environment THEME 'light'" # let there be light
+# alias ltbd="tmux source-file /home/pmg/git/cli_configs/ubuntu/tmux/tmux-gruvbox-dark.conf; tmux set-environment THEME 'dark'" # let there be dark
+alias ltbl="export LIGHT_MODE=LIGHT" # let there be light
+alias ltbd="export LIGHT_MODE=DARK" # let there be dark
