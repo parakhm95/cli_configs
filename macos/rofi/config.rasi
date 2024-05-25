@@ -1,0 +1,8 @@
+configuration {
+  modi: [ combi ];
+  combi-modi: [ window, drun, run ];
+  show-icons: true;
+}
+
+@theme "DarkBlue"
+// @import "/home/pmg/.local/share/rofi/themes/spotlight-dark.rasi"
