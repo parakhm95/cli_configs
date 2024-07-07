@@ -52,10 +52,9 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a tmux
-bindsym $mod+Shift+Return exec i3-sensible-terminal -e tmux
-
-# start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
+# start a terminal
+bindsym $mod+Shift+Return exec i3-sensible-terminal -e tmux
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -122,13 +121,13 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:~$"
-set $ws2 "2:www"
+set $ws2 "2:~$"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
+set $ws7 "7:file"
+set $ws8 "8:www"
 set $ws9 "9:comms"
 set $ws10 "10"
 
@@ -247,18 +246,18 @@ bindsym Mod4+k focus output down
 
 
 # assign [class="firefox"] workspace number $ws2
-assign [class="Microsoft Teams - Preview"] workspace number $ws9
 assign [class="Mailspring"] workspace number $ws9
 assign [class="obsidian"] workspace number $ws9
+assign [class="Zotero"] workspace number $ws9
 # assign [class="Gnome-terminal"] workspace number $ws1
 exec --no-startup-id i3-msg 'workspace $ws9; exec mailspring'
 exec --no-startup-id i3-msg 'workspace $ws9; exec obsidian'
 exec --no-startup-id i3-msg 'workspace $ws9; exec zotero'
-exec --no-startup-id i3-msg 'workspace $ws2; exec firefox'
-exec --no-startup-id i3-msg 'workspace $ws1; exec gnome-terminal'
-exec --no-startup-id xinput set-prop "DELL097D:00 04F3:311C Touchpad" "libinput Tapping Enabled" 1
+exec --no-startup-id i3-msg 'workspace $ws8; exec firefox'
+exec --no-startup-id i3-msg 'workspace $ws7; exec nautilus'
+exec --no-startup-id i3-msg 'workspace $ws1; exec i3-sensible-terminal -e tmux'
+exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 bindsym $mod+F2 [class="firefox"] focus
-bindsym $mod+F1 [class="Microsoft Teams - Preview"] focus
 
 # Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
