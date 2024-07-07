@@ -192,6 +192,9 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+    colors{
+        focused_workspace  #FFFFF #593CC8
+    }
         output eDP-1
         output primary
         position top
@@ -205,6 +208,9 @@ bar {
 }
 
 bar {
+    colors{
+        focused_workspace  #FFFFF #593CC8
+    }
         output DP-1-2
         output DisplayPort-1
         output DisplayPort-3
@@ -219,6 +225,10 @@ bar {
 }
 
 bar {
+
+    colors{
+        focused_workspace  #FFFFF #593CC8
+    }
         # output primary
         position bottom
         # status_command i3status
@@ -268,7 +278,7 @@ bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(d
 bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
 bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
-client.focused #4c7899 #285577 #ffffff #900000 #285577
+client.focused #4c7899 #593CC8 #FFFFFF #900000 #285577
 exec --no-startup-id picom
 
 gaps inner 5
