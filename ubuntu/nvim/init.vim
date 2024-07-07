@@ -68,7 +68,7 @@ let mapleader=' '
 nnoremap <C-p> <cmd>Telescope find_files<cr>
 nnoremap <leader>/ <cmd>Telescope live_grep<cr>
 " nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>bf <cmd>Telescope buffers<cr>
+nnoremap <C-o> <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>of <cmd>Telescope oldfiles<cr>
 nnoremap <leader>ff <cmd>Telescope current_buffer_fuzzy_find<cr>
