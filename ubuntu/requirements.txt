@@ -1,0 +1,20 @@
+i3blocks
+---
+brightnessctl
+acpi
+pamixer
+---
+meson
+libpulse-dev
+---
+---
+neovim
+---
+nodejs for coc
+vim-plug
+---
+ranger
+tmux
+i3wm
+rofi
+keyring
