@@ -68,7 +68,7 @@ let mapleader=' '
 nnoremap <C-p> <cmd>Telescope find_files<cr>
 nnoremap <leader>/ <cmd>Telescope live_grep<cr>
 " nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <C-o> <cmd>Telescope buffers<cr>
+nnoremap <leader>b <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>of <cmd>Telescope oldfiles<cr>
 nnoremap <leader>ff <cmd>Telescope current_buffer_fuzzy_find<cr>
@@ -82,6 +82,8 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+" Make escape work in terminal mode
+tnoremap <Esc> <C-\><C-n> 
 
 noremap <expr> j v:count ? 'j' : 'gj'
 noremap <expr> k v:count ? 'k' : 'gk'
