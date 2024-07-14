@@ -22,6 +22,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' }
 Plug 'navarasu/onedark.nvim'
 Plug 'EdenEast/nightfox.nvim' " Vim-Plug
 Plug 'bling/vim-bufferline'
@@ -30,11 +31,13 @@ Plug 'nvim-treesitter/nvim-treesitter-context'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
-Plug 'nvim-tree/nvim-web-devicons'
+ Plug 'nvim-tree/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
 Plug 'numToStr/Comment.nvim'
 Plug 'goolord/alpha-nvim'
 Plug 'github/copilot.vim'
 Plug 'srcery-colors/srcery-vim'
+Plug 'rbong/vim-flog'
 
 
 call plug#end()
