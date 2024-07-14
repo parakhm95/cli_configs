@@ -259,8 +259,10 @@ bindsym Mod4+k focus output down
 assign [class="Mailspring"] workspace number $ws9
 assign [class="obsidian"] workspace number $ws9
 assign [class="Zotero"] workspace number $ws9
+assign [class="teams-for-linux"] workspace number $ws9
 # assign [class="Gnome-terminal"] workspace number $ws1
-exec --no-startup-id i3-msg 'workspace $ws9; exec mailspring'
+# exec --no-startup-id i3-msg 'workspace $ws9; exec mailspring'
+exec --no-startup-id i3-msg 'workspace $ws9; exec teams-for-linux'
 exec --no-startup-id i3-msg 'workspace $ws9; exec obsidian'
 exec --no-startup-id i3-msg 'workspace $ws9; exec zotero'
 exec --no-startup-id i3-msg 'workspace $ws8; exec firefox'
