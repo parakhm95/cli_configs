@@ -18,3 +18,4 @@ tmux
 i3wm
 rofi
 keyring
+xclip
