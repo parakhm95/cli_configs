@@ -10,5 +10,7 @@
   "coc.preferences.formatOnSave": false,
   "markdownlint.config": {
     "line_length": false
-  }
+  },
+    "pyright.inlayHints.parameterTypes": false,
+    "pyright.inlayHints.variableTypes": false,
 }

@@ -38,6 +38,7 @@ Plug 'goolord/alpha-nvim'
 Plug 'github/copilot.vim'
 Plug 'srcery-colors/srcery-vim'
 Plug 'rbong/vim-flog'
+Plug 'segeljakt/vim-silicon'
 
 
 call plug#end()
@@ -76,7 +77,7 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>of <cmd>Telescope oldfiles<cr>
 nnoremap <leader>ff <cmd>Telescope current_buffer_fuzzy_find<cr>
 nnoremap <leader>oo <cmd>CocCommand clangd.switchSourceHeader<cr>
-nnoremap <C-O> <cmd>Telescope lsp_document_symbols query=searchTerm<cr>
+" nnoremap <C-O> <cmd>Telescope lsp_document_symbols query=searchTerm<cr>
 nnoremap J <cmd>bprevious<cr>
 nnoremap K <cmd>bn<cr>
 nnoremap <leader>n :NERDTreeFind<CR>

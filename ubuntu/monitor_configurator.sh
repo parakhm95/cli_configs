@@ -6,7 +6,7 @@ StartLimitIntervalSec=0
 [Service]
 Type=simple
 Restart=always
-RestartSec=1
+RestartSec=3
 ExecStart=/home/pmg/git/cli_configs/ubuntu/monitor_automation.sh
 [Install]
 WantedBy=multi-user.target" > /etc/systemd/system/monitor_configurator.service
