@@ -37,3 +37,4 @@ PROMPT='%B%F{51}%n@%m%f%b %3d :~$ '
 # alias ltbd="tmux source-file /home/pmg/git/cli_configs/ubuntu/tmux/tmux-gruvbox-dark.conf; tmux set-environment THEME 'dark'" # let there be dark
 alias ltbl="export LIGHT_MODE=LIGHT" # let there be light
 alias ltbd="export LIGHT_MODE=DARK" # let there be dark
+alias cp="rsync -ah --info=progress2"
