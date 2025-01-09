@@ -19,3 +19,5 @@ i3wm
 rofi
 keyring
 xclip
+ncdu
+btop

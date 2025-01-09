@@ -14,7 +14,7 @@ alias gds="git diff --staged"
 # alias fuck='sudo $(fc -e -)'
 alias fuck='sudo $(fc -ln -1)'
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches"
-alias flog="/home/pmg/git/cli_configs/ubuntu/git-forest.sh --all --date=relative --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --style=15"
+alias flog="/home/$USER/git/cli_configs/ubuntu/git-forest.sh --all --date=relative --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --style=15"
 alias office_off="xrandr --output DisplayPort-3 --off --output DisplayPort-4 --off --output eDP --primary --dpi 100"
 alias office_on="xrandr --output eDP --mode 1920x1080 --primary --pos 3000x183 --rotate normal --dpi 100 --output DisplayPort-3 --mode 1920x1080 --dpi 100 --pos 1080x243 --rotate normal --dpi 100 --set \"TearFree\" \"on\" --output DisplayPort-4 --mode 1920x1080 --pos 0x0 --rotate left --set \"TearFree\" \"on\""
 alias r=". ranger"
