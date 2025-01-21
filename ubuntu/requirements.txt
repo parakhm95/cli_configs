@@ -20,3 +20,5 @@ rofi
 keyring
 xclip
 ranger-udisk-menu
+ncdu
+btop
