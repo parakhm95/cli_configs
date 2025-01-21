@@ -10,6 +10,7 @@ alias gs="git status"
 alias gd="git diff"
 alias gp="git push"
 alias gds="git diff --staged"
+alias gf="git fetch --all"
 # alias fuck='sudo $(history -p !!)'
 # alias fuck='sudo $(fc -e -)'
 alias fuck='sudo $(fc -ln -1)'
@@ -38,3 +39,4 @@ PROMPT='%B%F{51}%n@%m%f%b %3d :~$ '
 alias ltbl="export LIGHT_MODE=LIGHT" # let there be light
 alias ltbd="export LIGHT_MODE=DARK" # let there be dark
 alias cp="rsync -ah --info=progress2"
+alias lsm="ls -l --block-size=M"

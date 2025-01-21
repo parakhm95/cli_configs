@@ -19,3 +19,4 @@ i3wm
 rofi
 keyring
 xclip
+ranger-udisk-menu
