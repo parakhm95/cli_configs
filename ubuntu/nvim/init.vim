@@ -41,6 +41,7 @@ Plug 'rbong/vim-flog'
 Plug 'segeljakt/vim-silicon'
 Plug 'nyoom-engineering/oxocarbon.nvim'
 Plug '0xstepit/flow.nvim'
+Plug 'scottmckendry/cyberdream.nvim'
 
 
 call plug#end()
@@ -65,6 +66,7 @@ let g:coc_global_extensions = [
             \'coc-texlab',
             \'coc-yaml',
             \'coc-xml',
+            \'coc-pyright'
 			\]
 
 
@@ -112,18 +114,34 @@ colorscheme carbonfox
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 " Switch dark and light mode tmux
+" function! Toggle_Light_Dark_Colorscheme()
+"     if system('echo $LIGHT_MODE')[0:4] == 'LIGHT'
+"         :silent :!export LIGHT_MODE='DARK'
+"         :colorscheme carbonfox
+"         " :silent :!tmux source-file ~/.tmux_light.conf
+"     else
+"         :silent :!export LIGHT_MODE='LIGHT'
+"         :colorscheme dayfox
+"         " :silent :!tmux set-environment THEME 'dark'
+"         " :silent :!tmux source-file ~/.tmux_dark.conf
+"     endif
+"     " :call SetColorScheme()
+" endfunction
+
 function! Toggle_Light_Dark_Colorscheme()
-    if system('echo $LIGHT_MODE')[0:4] == 'LIGHT'
-        :silent :!export LIGHT_MODE='DARK'
-        :colorscheme carbonfox
-        " :silent :!tmux source-file ~/.tmux_light.conf
+    if exists('$LIGHT_MODE') && $LIGHT_MODE ==# 'LIGHT'
+        " Switch to dark mode
+        let $LIGHT_MODE = 'DARK'             " Update LIGHT_MODE environment variable
+        :colorscheme carbonfox               " Set dark theme in Vim
+        :silent :!tmux set-environment LIGHT_MODE DARK
+        :silent :!tmux set-option -g @tmux-gruvbox 'dark'
     else
-        :silent :!export LIGHT_MODE='LIGHT'
-        :colorscheme dayfox
-        " :silent :!tmux set-environment THEME 'dark'
-        " :silent :!tmux source-file ~/.tmux_dark.conf
+        " Switch to light mode
+        let $LIGHT_MODE = 'LIGHT'            " Update LIGHT_MODE environment variable
+        :colorscheme cyberdream-light                  " Set light theme in Vim
+        :silent :!tmux set-environment LIGHT_MODE LIGHT
+        :silent :!tmux set-option -g @tmux-gruvbox 'light'
     endif
-    " :call SetColorScheme()
 endfunction
 
 nnoremap <leader>cs :call Toggle_Light_Dark_Colorscheme()<cr>

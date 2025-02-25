@@ -14,8 +14,14 @@ require('telescope').setup{
   pickers = {
     -- Default configuration for builtin pickers goes here:
     find_files = {
-         hidden = true
-        }
+         hidden = true,
+         follow = true
+        },
+    live_grep = {
+      additional_args = function(opts)
+        return { "--follow" }
+      end
+    },
     -- picker_name = {
     --   picker_config_key = value,
     --   ...
