@@ -87,6 +87,7 @@ else
     cd ~/git
     git clone https://github.com/tmux/tmux.git
     cd tmux
+    git checkout 3.0a
     sh autogen.sh
     ./configure
     make && sudo make install
