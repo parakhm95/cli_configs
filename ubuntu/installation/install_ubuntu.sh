@@ -237,4 +237,13 @@ else
     echo "source /opt/ros/noetic/setup.bash" >> ~/.zshrc
 fi
 
+echo "------------------Installing tig---------------------"
+# Check if tig is already installed
+if command -v tig &> /dev/null; then
+    echo "tig is already installed."
+else
+    echo "Installing tig..."
+    sudo apt install tig
+fi
+
 echo "------------------------------DONE----------------------"
