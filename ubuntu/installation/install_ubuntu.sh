@@ -145,6 +145,15 @@ else
     sudo sensors-detect
 fi
 
+echo "---------------------------Installing pamixer---------------------"
+# Check if pamixer is already installed
+if command -v pamixer &> /dev/null; then
+    echo "pamixer is already installed."
+else
+    echo "Installing pamixer..."
+    sudo apt install pamixer
+fi
+
 echo "---------------------Installing i3blocks-----------------"
 # Check if i3blocks is already installed
 if command -v i3blocks &> /dev/null; then
