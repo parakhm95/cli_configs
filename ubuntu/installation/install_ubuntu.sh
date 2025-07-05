@@ -21,6 +21,17 @@ else
 fi
 
 
+echo "------------------Installing nodejs-------------------"
+# Check if nodejs is already installed
+if command -v node &> /dev/null; then
+    echo "Node.js is already installed."
+else
+    echo "Installing Node.js..."
+    cd /tmp
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+    \. "$HOME/.nvm/nvm.sh"
+    nvm install 22
+fi
 
 
 echo "------------------Installing neovim---------------------"
@@ -153,17 +164,6 @@ else
     sudo make install
 fi
 
-echo "------------------Installing nodejs-------------------"
-# Check if nodejs is already installed
-if command -v node &> /dev/null; then
-    echo "Node.js is already installed."
-else
-    echo "Installing Node.js..."
-    cd /tmp
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-    \. "$HOME/.nvm/nvm.sh"
-    nvm install 22
-fi
 
 echo "------------------Installing Keychain------------------"
 # Check if keychain is already installed
