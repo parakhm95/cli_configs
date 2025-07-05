@@ -135,19 +135,30 @@ fi
 cd ~/.config
 ln -s ~/git/cli_configs/ubuntu/i3 .
 
+echo "--------------------Installing lm-sensors-----------------"
+# Check if lm-sensors is already installed
+if command -v sensors &> /dev/null; then
+    echo "lm-sensors is already installed."
+else
+    echo "Installing lm-sensors..."
+    sudo apt install lm-sensors
+    sudo sensors-detect
+fi
+
 echo "---------------------Installing i3blocks-----------------"
 # Check if i3blocks is already installed
 if command -v i3blocks &> /dev/null; then
     echo "i3blocks is already installed."
 else
     echo "Installing i3blocks..."
-    cd ~/git
-    git clone https://github.com/vivien/i3blocks
-    cd i3blocks
-    ./autogen.sh
-    ./configure
-    make
-    sudo make install
+    # cd ~/git
+    # git clone https://github.com/vivien/i3blocks
+    # cd i3blocks
+    # ./autogen.sh
+    # ./configure
+    # make
+    # sudo make install
+    sudo apt install i3blocks
 fi
 cd ~/.config
 ln -s ~/git/cli_configs/ubuntu/i3blocks .
