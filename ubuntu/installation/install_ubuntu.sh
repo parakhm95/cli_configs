@@ -219,8 +219,17 @@ if command -v btop &> /dev/null; then
 else
     echo "Installing btop..."
     cd /tmp
-    wget https://github.com/aristocratos/btop/releases/download/v1.4.3/btop-aarch64-linux-musl.tbz
-    tar -xvf btop-aarch64-linux-musl.tbz
+    # Check architecture
+    if [[ "$(uname -m)" == "x86_64" ]]; then
+        wget https://github.com/aristocratos/btop/releases/download/v1.4.3/btop-x86_64-linux-musl.tbz
+        tar -xvf btop-x86_64-linux-musl.tbz
+    elif [[ "$(uname -m)" == "aarch64" ]]; then
+        wget https://github.com/aristocratos/btop/releases/download/v1.4.3/btop-aarch64-linux-musl.tbz
+        tar -xvf btop-aarch64-linux-musl.tbz
+    else
+        echo "Unsupported architecture: $(uname -m)"
+        exit 1
+    fi
     cd btop
     sudo make install
 fi
