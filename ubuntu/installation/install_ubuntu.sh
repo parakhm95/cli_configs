@@ -226,16 +226,22 @@ else
 fi
 
 echo "--------------------Installing ROS1---------------------"
-# Check if ROS1 is already installed
-if command -v roscore &> /dev/null; then
-    echo "ROS1 is already installed."
+# Check if Ubuntu version is 20.04
+if [[ $(lsb_release -rs) != "20.04" ]]; then
+    echo "Not installing ROS1 as the Ubuntu version is not 20.04."
 else
-    echo "Installing ROS1..."
-    sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-    curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
-    sudo apt update
-    sudo apt install ros-noetic-desktop-full
-    echo "source /opt/ros/noetic/setup.bash" >> ~/.zshrc
+    echo "Ubuntu version is 20.04, proceeding with ROS1 installation."
+    # Check if ROS1 is already installed
+    if command -v roscore &> /dev/null; then
+        echo "ROS1 is already installed."
+    else
+        echo "Installing ROS1..."
+        sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+        curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+        sudo apt update
+        sudo apt install ros-noetic-desktop-full
+        echo "source /opt/ros/noetic/setup.bash" >> ~/.zshrc
+    fi
 fi
 
 echo "------------------Installing tig---------------------"
