@@ -282,4 +282,10 @@ else
     sudo apt install tig
 fi
 
+echo "-------------------Installing nerdfonts-----------------"
+cd /tmp
+mkdir -p ~/.fonts/RobotoMono
+curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/RobotoMono.tar.xz
+tar -xf RobotoMono.tar.xz -C ~/.fonts/RobotoMono
+fc-cache -fv
 echo "------------------------------DONE----------------------"
