@@ -33,6 +33,16 @@ else
     nvm install 22
 fi
 
+echo "------------------Install clangd-----------------------"
+# Check if clangd is already installed
+if command -v clangd &> /dev/null; then
+    echo "Clangd is already installed."
+else
+    echo "Installing Clangd..."
+    sudo apt install clangd-18
+    sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-18 100
+fi
+
 
 echo "------------------Installing neovim---------------------"
 # Check if neovim is already installed
