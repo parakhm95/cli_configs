@@ -279,7 +279,11 @@ else
         curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
         sudo apt update
         sudo apt install ros-noetic-desktop-full
-        echo "source /opt/ros/noetic/setup.bash" >> ~/.zshrc
+        echo "source /opt/ros/noetic/setup.zsh" >> ~/.zshrc
+        sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+        sudo apt install python3-rosdep python3-pip
+        sudo rosdep init
+        rosdep update
     fi
 fi
 
@@ -306,4 +310,14 @@ else
     echo "Installing Kitty..."
     curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 fi
+echo "-------------------Installing Jupyter Notebook-----------------"
+# Check if Jupyter Notebook is already installed
+if command -v jupyter &> /dev/null; then
+    echo "Jupyter Notebook is already installed."
+else
+    echo "Installing Jupyter Notebook..."
+    sudo apt install jupyter-notebook ipython3
+fi
+echo "-------------------Installing Latex packages-----------------"
+sudo apt install latexmk texlive-latex-extra texlive-fonts-extra texlive-fonts-recommended texlive-latex-recommended zathura texlive-science -y
 echo "------------------------------DONE----------------------"
