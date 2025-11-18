@@ -318,6 +318,17 @@ else
     echo "Installing Jupyter Notebook..."
     sudo apt install jupyter-notebook ipython3
 fi
+
 echo "-------------------Installing Latex packages-----------------"
 sudo apt install latexmk texlive-latex-extra texlive-fonts-extra texlive-fonts-recommended texlive-latex-recommended zathura texlive-science -y
+
+echo "-----------------Install polybar---------------------"
+# Check if polybar is already installed
+if command -v polybar &> /dev/null; then
+    echo "polybar is already installed."
+else
+    echo "Installing polybar..."
+    sudo apt install polybar
+fi
+
 echo "------------------------------DONE----------------------"
