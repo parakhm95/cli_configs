@@ -248,7 +248,10 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output left
+bindsym $mod+Ctrl+Right move workspace to output right
+bindsym $mod+Ctrl+Left move workspace to output left
 bindsym $mod+Ctrl+Up move workspace to output up
+bindsym $mod+Ctrl+Down move workspace to output down
 bindsym Mod4+h focus output left
 bindsym Mod4+l focus output right
 bindsym Mod4+j focus output up
