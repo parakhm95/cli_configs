@@ -42,4 +42,4 @@ alias ltbl="export LIGHT_MODE=LIGHT" # let there be light
 alias ltbd="export LIGHT_MODE=DARK" # let there be dark
 alias cp="rsync -ah --info=progress2"
 alias lsm="ls -l --block-size=M"
-# export GDK_SCALE=2.0
+alias ltx="latexmk -pvc --view=pdf"
