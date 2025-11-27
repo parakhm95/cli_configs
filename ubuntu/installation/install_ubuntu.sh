@@ -33,6 +33,16 @@ else
     nvm install 22
 fi
 
+echo "------------------Install clangd-----------------------"
+# Check if clangd is already installed
+if command -v clangd &> /dev/null; then
+    echo "Clangd is already installed."
+else
+    echo "Installing Clangd..."
+    sudo apt install clangd-18
+    sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-18 100
+fi
+
 
 echo "------------------Installing neovim---------------------"
 # Check if neovim is already installed
@@ -269,7 +279,11 @@ else
         curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
         sudo apt update
         sudo apt install ros-noetic-desktop-full
-        echo "source /opt/ros/noetic/setup.bash" >> ~/.zshrc
+        echo "source /opt/ros/noetic/setup.zsh" >> ~/.zshrc
+        sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+        sudo apt install python3-rosdep python3-pip
+        sudo rosdep init
+        rosdep update
     fi
 fi
 
@@ -281,5 +295,54 @@ else
     echo "Installing tig..."
     sudo apt install tig
 fi
+
+echo "-------------------Installing nerdfonts-----------------"
+cd /tmp
+mkdir -p ~/.fonts/RobotoMono
+curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/RobotoMono.tar.xz
+tar -xf RobotoMono.tar.xz -C ~/.fonts/RobotoMono
+fc-cache -fv
+echo "--------------------Installing Kitty---------------------"
+# Check if kitty is already installed
+if command -v kitty &> /dev/null; then
+    echo "Kitty is already installed."
+else
+    echo "Installing Kitty..."
+    curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+fi
+echo "-------------------Installing Jupyter Notebook-----------------"
+# Check if Jupyter Notebook is already installed
+if command -v jupyter &> /dev/null; then
+    echo "Jupyter Notebook is already installed."
+else
+    echo "Installing Jupyter Notebook..."
+    sudo apt install jupyter-notebook ipython3
+fi
+
+echo "-------------------Installing Latex packages-----------------"
+sudo apt install latexmk texlive-latex-extra texlive-fonts-extra texlive-fonts-recommended texlive-latex-recommended zathura texlive-science -y
+
+echo "-----------------Install polybar---------------------"
+# Check if polybar is already installed
+if command -v polybar &> /dev/null; then
+    echo "polybar is already installed."
+else
+    echo "Installing polybar..."
+    sudo apt install polybar
+fi
+cd ~/.config
+ln -s ~/git/cli_configs/ubuntu/polybar .
+
+echo "------------------Install PowerLevel10K---------------------"
+# Check if PowerLevel10K is already installed
+if command -v p10k &> /dev/null; then
+    echo "PowerLevel10K is already installed."
+else
+    echo "Installing PowerLevel10K..."
+    cd ~/git
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/git/powerlevel10k
+    echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+fi
+ln -s ~/git/cli_configs/ubuntu/powerlevel10k/.p10k.zsh ~/.p10k.zsh
 
 echo "------------------------------DONE----------------------"
