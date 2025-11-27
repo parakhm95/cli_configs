@@ -95,8 +95,8 @@ nnoremap <C-H> <C-W><C-H>
 " Make escape work in terminal mode
 tnoremap <Esc> <C-\><C-n> 
 " make Ctrl+b behave like Ctrl+a 
-nnoremap <C-b> <C-a>
-xnoremap <C-b> <C-a>
+" nnoremap <C-b> <C-a>
+" xnoremap <C-b> <C-a>
 
 noremap <expr> j v:count ? 'j' : 'gj'
 noremap <expr> k v:count ? 'k' : 'gk'
