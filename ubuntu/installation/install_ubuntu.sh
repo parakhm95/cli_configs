@@ -330,5 +330,7 @@ else
     echo "Installing polybar..."
     sudo apt install polybar
 fi
+cd ~/.config
+ln -s ~/git/cli_configs/ubuntu/polybar .
 
 echo "------------------------------DONE----------------------"
