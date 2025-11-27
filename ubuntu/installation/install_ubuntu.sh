@@ -333,4 +333,16 @@ fi
 cd ~/.config
 ln -s ~/git/cli_configs/ubuntu/polybar .
 
+echo "------------------Install PowerLevel10K---------------------"
+# Check if PowerLevel10K is already installed
+if command -v p10k &> /dev/null; then
+    echo "PowerLevel10K is already installed."
+else
+    echo "Installing PowerLevel10K..."
+    cd ~/git
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/git/powerlevel10k
+    echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+fi
+ln -s ~/git/cli_configs/ubuntu/powerlevel10k/.p10k.zsh ~/.p10k.zsh
+
 echo "------------------------------DONE----------------------"
