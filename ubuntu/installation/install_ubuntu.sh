@@ -345,4 +345,21 @@ else
 fi
 ln -s ~/git/cli_configs/ubuntu/powerlevel10k/.p10k.zsh ~/.p10k.zsh
 
+echo "--------------Install arandr----------------------------"
+if command -v arandr &> /dev/null; then
+    echo "arandr is already installed."
+else
+    echo "Installing arandr..."
+    sudo apt install arandr
+fi
+
+# used for screenshots in i3wm
+echo "------------------Install xdotool------------------------"
+if command -v xdotool &> /dev/null; then
+    echo "xdotool is already installed."
+else
+    echo "Installing xdotool..."
+    sudo apt install xdotool
+fi
+
 echo "------------------------------DONE----------------------"
