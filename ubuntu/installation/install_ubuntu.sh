@@ -91,7 +91,13 @@ fi
 
 
 echo "-------------------Installing vim-plug------------------"
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# check if vim-plug is already installed
+if [ -f "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim ]; then
+    echo "vim-plug is already installed."
+else
+    echo "Installing vim-plug..."
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+fi
 
 
 
@@ -297,11 +303,18 @@ else
 fi
 
 echo "-------------------Installing nerdfonts-----------------"
-cd /tmp
-mkdir -p ~/.fonts/RobotoMono
-curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/RobotoMono.tar.xz
-tar -xf RobotoMono.tar.xz -C ~/.fonts/RobotoMono
-fc-cache -fv
+# check if RobotoMono Nerd Font is already installed
+if fc-list | grep -q -i "RobotoMono" &> /dev/null; then
+    echo "Roboto Mono Nerd Font is already installed."
+else
+    echo "Installing Roboto Mono Nerd Font..."
+    cd /tmp
+    mkdir -p ~/.fonts/RobotoMono
+    curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/RobotoMono.tar.xz
+    tar -xf RobotoMono.tar.xz -C ~/.fonts/RobotoMono
+    fc-cache -fv
+fi
+
 echo "--------------------Installing Kitty---------------------"
 # Check if kitty is already installed
 if command -v kitty &> /dev/null; then
