@@ -1,5 +1,5 @@
 # Install zsh first
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 # Check current shell
 current_shell=$(basename "$SHELL")
@@ -59,6 +59,9 @@ else
     git checkout stable
     make CMAKE_BUILD_TYPE=RelWithDebInfo
     sudo make install
+    # Create a symbolic link for neovim configuration
+    cd ~/.config
+    ln -s ~/git/cli_configs/ubuntu/nvim .
 fi
 
 echo "----------------Installing tree-sitter-cli-----------------"
@@ -80,9 +83,6 @@ else
 fi
 
 
-# Create a symbolic link for neovim configuration
-cd ~/.config
-ln -s ~/git/cli_configs/ubuntu/nvim .
 
 
 
@@ -112,10 +112,10 @@ else
     sh autogen.sh
     ./configure
     make && sudo make install
+    # Create a symbolic link for tmux configuration
+    cd 
+    ln -s ~/git/cli_configs/ubuntu/tmux/.tmux.conf .
 fi
-# Create a symbolic link for tmux configuration
-cd 
-ln -s ~/git/cli_configs/ubuntu/tmux/.tmux.conf .
 
 echo "-----------------Installing Tmux Plugin Manager (TPM)----------------"
 # Check if TPM is already installed
@@ -141,9 +141,9 @@ else
     echo "deb [signed-by=/usr/share/keyrings/sur5r-keyring.gpg] http://debian.sur5r.net/i3/ $(grep '^VERSION_CODENAME=' /etc/os-release | cut -f2 -d=) universe" | sudo tee /etc/apt/sources.list.d/sur5r-i3.list
     sudo apt update
     sudo apt install i3
+    cd ~/.config
+    ln -s ~/git/cli_configs/ubuntu/i3 .
 fi
-cd ~/.config
-ln -s ~/git/cli_configs/ubuntu/i3 .
 
 echo "--------------------Installing lm-sensors-----------------"
 # Check if lm-sensors is already installed
@@ -178,9 +178,9 @@ else
     # make
     # sudo make install
     sudo apt install i3blocks
+    cd ~/.config
+    ln -s ~/git/cli_configs/ubuntu/i3blocks .
 fi
-cd ~/.config
-ln -s ~/git/cli_configs/ubuntu/i3blocks .
 
 echo "------------------Installing Ranger--------------------"
 # Check if ranger is already installed
@@ -251,9 +251,9 @@ if command -v rofi &> /dev/null; then
 else
     echo "Installing Rofi..."
     sudo apt install rofi
+    cd ~/.config
+    ln -s ~/git/cli_configs/ubuntu/rofi .
 fi
-cd ~/.config
-ln -s ~/git/cli_configs/ubuntu/rofi .
 
 echo "------------------Installing fzf---------------------"
 # Check if fzf is already installed
@@ -329,9 +329,9 @@ if command -v polybar &> /dev/null; then
 else
     echo "Installing polybar..."
     sudo apt install polybar
+    cd ~/.config
+    ln -s ~/git/cli_configs/ubuntu/polybar .
 fi
-cd ~/.config
-ln -s ~/git/cli_configs/ubuntu/polybar .
 
 echo "------------------Install PowerLevel10K---------------------"
 # Check if PowerLevel10K is already installed
@@ -342,8 +342,8 @@ else
     cd ~/git
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/git/powerlevel10k
     echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+    ln -s ~/git/cli_configs/ubuntu/powerlevel10k/.p10k.zsh ~/.p10k.zsh
 fi
-ln -s ~/git/cli_configs/ubuntu/powerlevel10k/.p10k.zsh ~/.p10k.zsh
 
 echo "--------------Install arandr----------------------------"
 if command -v arandr &> /dev/null; then
