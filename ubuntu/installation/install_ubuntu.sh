@@ -321,7 +321,7 @@ if command -v kitty &> /dev/null; then
     echo "Kitty is already installed."
 else
     echo "Installing Kitty..."
-    curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+    # curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 fi
 echo "-------------------Installing Jupyter Notebook-----------------"
 # Check if Jupyter Notebook is already installed
