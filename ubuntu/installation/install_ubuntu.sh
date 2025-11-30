@@ -375,4 +375,20 @@ else
     sudo apt install xdotool
 fi
 
+echo "------------------Install openssh-server-----------------"
+if command -v ssh &> /dev/null; then
+    echo "openssh-server is already installed."
+else
+    echo "Installing openssh-server..."
+    sudo apt install openssh-server
+fi
+
+echo "------------------Install Obsidian-----------------"
+if snap list obsidian &> /dev/null; then
+    echo "Obsidian is already installed."
+else
+    echo "Installing Obsidian..."
+    sudo snap install obsidian --classic
+fi
+
 echo "------------------------------DONE----------------------"
