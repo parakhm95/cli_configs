@@ -354,7 +354,7 @@ else
     echo "Installing PowerLevel10K..."
     cd ~/git
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/git/powerlevel10k
-    echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+    echo 'source ~/git/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
     ln -s ~/git/cli_configs/ubuntu/powerlevel10k/.p10k.zsh ~/.p10k.zsh
 fi
 
@@ -390,5 +390,43 @@ else
     echo "Installing Obsidian..."
     sudo snap install obsidian --classic
 fi
+
+echo "------------------Install brightnessctl-----------------"
+if command -v brightnessctl &> /dev/null; then
+    echo "brightnessctl is already installed."
+else
+    echo "Installing brightnessctl..."
+    sudo apt install brightnessctl
+fi
+
+echo "------------------Install fd-----------------"
+sudo apt install fd-find
+
+echo "------------------Install yktoo-indicator-----------------"
+# indicator-sound-switcher
+if command -v indicator-sound-switcher &> /dev/null; then
+    echo "yktoo-indicator is already installed."
+else
+    sudo apt-add-repository ppa:yktooo/ppa
+    sudo apt-get update
+    sudo apt-get install indicator-sound-switcher
+fi
+
+echo "------------------Install thunderbird-----------------"
+if command -v thunderbird &> /dev/null; then
+    echo "thunderbird is already installed."
+else
+    echo "Installing thunderbird..."
+    sudo snap install thunderbird
+fi
+
+echo "------------------Install feh-----------------"
+if command -v feh &> /dev/null; then
+    echo "feh is already installed."
+else
+    echo "Installing feh..."
+    sudo apt install feh
+fi
+
 
 echo "------------------------------DONE----------------------"
