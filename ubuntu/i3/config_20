@@ -68,6 +68,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show combi
 bindsym $mod+Shift+d exec --no-startup-id rofi -show run
 
+focus_wrapping workspace
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
