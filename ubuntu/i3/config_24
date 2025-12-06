@@ -273,7 +273,7 @@ exec --no-startup-id i3-msg 'workspace $ws9; exec zotero'
 exec --no-startup-id i3-msg 'workspace $ws8; exec firefox'
 exec --no-startup-id i3-msg 'workspace $ws7; exec nautilus'
 exec --no-startup-id i3-msg 'workspace $ws1; exec i3-sensible-terminal -e tmux'
-exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
+exec --no-startup-id xinput set-prop "ELAN0678:00 04F3:3195 Touchpad" "libinput Tapping Enabled" 1
 exec --no-startup-id feh --bg-scale /home/pmg/Documents/Wallpapers_for_Mac/space_shuttle.png
 bindsym $mod+F2 [class="firefox"] focus
 
