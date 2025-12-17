@@ -323,6 +323,7 @@ else
     echo "Installing Kitty..."
     # curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 fi
+
 echo "-------------------Installing Jupyter Notebook-----------------"
 # Check if Jupyter Notebook is already installed
 if command -v jupyter &> /dev/null; then
