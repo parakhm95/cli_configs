@@ -429,5 +429,12 @@ else
     sudo apt install feh
 fi
 
+echo "-------------------Install gitman-----------------"
+if command -v gitman &> /dev/null; then
+    echo "gitman is already installed."
+else
+    echo "Installing gitman..."
+    pipx install gitman
+fi
 
 echo "------------------------------DONE----------------------"
