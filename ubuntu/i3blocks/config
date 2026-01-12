@@ -28,6 +28,18 @@ command=/usr/share/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+[cpu_fan1]
+# insert a fan symbol utf-8
+label=🌀
+interval=3
+command= cat /sys/class/hwmon/hwmon8/fan1_input
+
+[cpu_fan2]
+# insert a fan symbol utf-8
+label=🌀
+interval=3
+command= cat /sys/class/hwmon/hwmon8/fan2_input
+
 # Volume indicator
 #
 # The first parameter sets the step (and units to display)
