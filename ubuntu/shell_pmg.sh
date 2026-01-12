@@ -48,3 +48,7 @@ zstyle :compinstall filename "${ZDOTDIR:-$HOME}/.zshrc"
 zstyle ':completion:*' menu select
 autoload -Uz compinit
 compinit
+autoload -U colors && colors
+alias ls='ls --color=auto'
+alias ffmpeg_video="ffmpeg -framerate 30 -i %03d.png -c:v libx264 -pix_fmt yuv420p out.mp4"
+alias ffmpeg_bounce="ffmpeg -i out.mp4 -filter_complex \"[0:v]reverse[vrev];[0:v][vrev]concat=n=2:v=1:a=0\" -movflags +faststart bounce.mp4"
