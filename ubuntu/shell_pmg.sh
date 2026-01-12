@@ -25,10 +25,10 @@ alias home_on="xrandr --output eDP --primary --mode 1920x1080 --pos 0x0 --rotate
 alias home_off="xrandr --output DisplayPort-1 --off"
 alias second-brain="cd ~/git/second-brain"
 
-if [ -z "$SSH_AGENT_PID" ]; then
-    eval `keychain --eval parakh`
-fi
-setxkbmap -option caps:escape
+# if [ -z "$SSH_AGENT_PID" ]; then
+#     eval `keychain --eval parakh`
+# fi
+# setxkbmap -option caps:escape
 alias weather="curl wttr.in/Prague"
 # alias ffmpeg_gif="ffmpeg -ss 30 -t 3 -i randomated.mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 output.gif"
 export VISUAL="nvim"
@@ -43,6 +43,7 @@ alias ltbd="export LIGHT_MODE=DARK" # let there be dark
 alias cp="rsync -ah --info=progress2"
 alias lsm="ls -l --block-size=M"
 alias ltx="latexmk -pvc --view=pdf"
+alias mapt="~/git/mrs_apptainer/wrapper.sh"
 
 zstyle :compinstall filename "${ZDOTDIR:-$HOME}/.zshrc"
 zstyle ':completion:*' menu select
