@@ -20,7 +20,7 @@ alias office_off="xrandr --output DisplayPort-3 --off --output DisplayPort-4 --o
 alias office_on="xrandr --output eDP --mode 1920x1080 --primary --pos 3000x183 --rotate normal --dpi 100 --output DisplayPort-3 --mode 1920x1080 --dpi 100 --pos 1080x243 --rotate normal --dpi 100 --set \"TearFree\" \"on\" --output DisplayPort-4 --mode 1920x1080 --pos 0x0 --rotate left --set \"TearFree\" \"on\""
 alias r=". ranger"
 alias ra=". ranger"
-xset r rate 240 70
+# xset r rate 240 70
 alias home_on="xrandr --output eDP --primary --mode 1920x1080 --pos 0x0 --rotate normal --dpi 100 --set \"TearFree\" \"on\" --output DisplayPort-1 --mode 2560x1440 --dpi 110 --rate 164.80 --pos 1920x0 --rotate normal --set \"TearFree\" \"on\""
 alias home_off="xrandr --output DisplayPort-1 --off"
 alias second-brain="cd ~/git/second-brain"
