@@ -25,7 +25,7 @@ Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' }
 Plug 'navarasu/onedark.nvim'
 Plug 'EdenEast/nightfox.nvim' " Vim-Plug
-Plug 'bling/vim-bufferline'
+" Plug 'bling/vim-bufferline'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-treesitter/nvim-treesitter-context' 
 Plug 'lukas-reineke/indent-blankline.nvim'
@@ -105,6 +105,8 @@ xnoremap("<leader>p", "\"_dP")
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
 lua require('pmg')
+" Don't refresh on every keystroke
+let g:coc_node_args = ['--max-old-space-size=4096']
 
 syntax on
 " colorscheme srcery
