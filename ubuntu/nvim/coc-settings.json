@@ -1,12 +1,15 @@
 {
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/17.0.3/clangd_17.0.3/bin/clangd",
-  "clangd.compilationDatabaseCandidates": [
-    "/home/pmg/Documents/offshore_ws/build",
-    "/home/pmg/Documents/nmpc_ws/build",
-  ],
-  "clangd.arguments": ["--header-insertion=never"],
+  "clangd.compilationDatabasePath": "/home/pmg/Documents/nmpc_ws/build", 
+  "clangd.trace.file": "/tmp/clangd.log",
+  "clangd.trace.server": "verbose",
+  "clangd.arguments": ["--header-insertion=never", "--compile-commands-dir=/home/pmg/Documents/nmpc_ws/build"],
   "python.formatting.provider": "autopep8",
   "python.formatting.autopep8Path": "~/.local/bin/autopep8",
+  "python.formatting.autopep8Args": [
+    "--max-line-length",
+    "160"
+  ],
   "coc.preferences.formatOnSave": false,
   "markdownlint.config": {
     "line_length": false
