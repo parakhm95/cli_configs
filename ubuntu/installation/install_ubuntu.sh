@@ -437,4 +437,26 @@ else
     pipx install gitman
 fi
 
+echo "---------------------Install grim-------------------"
+if command -v grim &> /dev/null; then
+    echo "grim is already installed."
+else
+    echo "Installing grim..."
+    cd ~/git
+    git clone https://gitlab.freedesktop.org/emersion/grim.git
+    cd grim
+    meson build
+    ninja -C build install
+fi
+
+echo "---------------------Install slurp-------------------"
+if command -v slurp &> /dev/null; then
+    echo "slurp is already installed."
+else
+    echo "Installing slurp..."
+    cd ~/git
+    git clone https://github.com/emersion/slurp
+    cd slurp
+    meson setup build
+    ninja -C build install
 echo "------------------------------DONE----------------------"
