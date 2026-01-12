@@ -43,6 +43,13 @@ Plug 'nyoom-engineering/oxocarbon.nvim'
 Plug '0xstepit/flow.nvim'
 Plug 'scottmckendry/cyberdream.nvim'
 
+" vimtex and its config
+Plug 'lervag/vimtex'
+let maplocalleader = ","
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_matchparen_enabled = 0
+let g:loaded_matchparen = 1
+
 "nerdtree config
 let g:NERDTreeHighlightCursorline=0
 
