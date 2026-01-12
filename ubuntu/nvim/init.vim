@@ -43,6 +43,18 @@ Plug 'nyoom-engineering/oxocarbon.nvim'
 Plug '0xstepit/flow.nvim'
 Plug 'scottmckendry/cyberdream.nvim'
 
+"nerdtree config
+let g:NERDTreeHighlightCursorline=0
+
+" Coc.nvim highlight on cursor hold
+autocmd CursorMoved * silent! CocActionAsync('highlight', v:null)
+
+" 1. Increase the delay before CoC starts doing 'heavy' work
+set updatetime=500
+
+" 2. Force Neovim to skip redrawing while these events are firing
+set lazyredraw
+
 
 call plug#end()
 
