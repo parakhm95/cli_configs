@@ -1,4 +1,4 @@
-require'nvim-treesitter.configs'.setup {
+require'nvim-treesitter'.setup {
   -- A list of parser names, or "all"
   ensure_installed = { "c", "lua","cpp","latex","python","yaml","markdown","markdown_inline","make","cmake"},
 
