@@ -289,6 +289,7 @@ bindsym $mod+Print exec grim -g "$(slurp)" -t png - | wl-copy -t image/png
 
 
 exec --no-startup-id swaymsg 'workspace 9; exec OBSIDIAN_USE_WAYLAND=1 obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland'
+exec --no-startup-id swaymsg 'workspace 9; exec mailspring --password-store="gnome-libsecret"'
 exec --no-startup-id swaymsg 'workspace 9; exec zotero'
 exec --no-startup-id swaymsg 'workspace 8; exec firefox'
 exec --no-startup-id swaymsg 'workspace 7; exec nautilus'
