@@ -309,3 +309,7 @@ gaps outer 5
 smart_gaps on
 default_border pixel 5
 focus_wrapping workspace
+
+# notification manager
+exec swaync
+bindsym $mod+Shift+n exec swaync-client -t -sw
