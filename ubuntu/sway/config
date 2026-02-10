@@ -25,7 +25,10 @@ include /etc/sway/config-vars.d/*
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+set $wallpapers_path $HOME/Documents/Wallpapers_for_Mac/selected
+set $my_wallpaper `find $wallpapers_path -type f | shuf -n 1`
+output * bg $my_wallpaper fill
 #
 # Example configuration:
 #
@@ -278,8 +281,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5 && $refresh_i3blo
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3blocks
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3blocks
 
-bindsym $mod+Control+s exec --no-startup-id "swaylock -f -i /home/pmg/Documents/Wallpapers_for_Mac/space_shuttle.png -t && systemctl suspend"
-bindsym $mod+Control+q exec swaylock -i /home/pmg/Documents/Wallpapers_for_Mac/space_shuttle.png -t
+bindsym $mod+Control+s exec --no-startup-id "swaylock -f -i $my_wallpaper -t && systemctl suspend"
+bindsym $mod+Control+q exec swaylock -i $my_wallpaper -t
 
 # Screenshot bindings
 # save to file
