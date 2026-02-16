@@ -29,7 +29,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
 Plug 'nvim-tree/nvim-web-devicons'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'numToStr/Comment.nvim'
 Plug 'goolord/alpha-nvim'
 Plug 'github/copilot.vim'
