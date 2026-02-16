@@ -124,7 +124,7 @@ noremap <expr> k v:count ? 'k' : 'gk'
 map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 xnoremap <leader>p "_dP
 " Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
+" autocmd VimEnter * NERDTree | wincmd p
 lua require('pmg')
 " Don't refresh on every keystroke
 let g:coc_node_args = ['--max-old-space-size=4096']
