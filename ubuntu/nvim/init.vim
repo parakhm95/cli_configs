@@ -122,7 +122,7 @@ tnoremap <Esc> <C-\><C-n>
 noremap <expr> j v:count ? 'j' : 'gj'
 noremap <expr> k v:count ? 'k' : 'gk'
 map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
-xnoremap("<leader>p", "\"_dP")
+xnoremap <leader>p "_dP
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
 lua require('pmg')
