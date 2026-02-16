@@ -4,7 +4,7 @@
 require("ibl").setup {
     indent = {
         -- This prevents it from recalculating everything constantly
-        smart_indent_cap = true, 
+        smart_indent_cap = false, 
     },
     scope = {
         -- Disabling "scope" highlighting saves a huge amount of CPU
