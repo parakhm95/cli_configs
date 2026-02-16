@@ -16,32 +16,34 @@ set ignorecase smartcase
 call plug#begin()
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'branch': 'master'}
 Plug 'nvim-telescope/telescope.nvim', { 'branch': 'master' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' }
-Plug 'navarasu/onedark.nvim'
-Plug 'EdenEast/nightfox.nvim' " Vim-Plug
 " Plug 'bling/vim-bufferline'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-treesitter/nvim-treesitter-context' 
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
- Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 Plug 'numToStr/Comment.nvim'
 Plug 'goolord/alpha-nvim'
 Plug 'github/copilot.vim'
-Plug 'srcery-colors/srcery-vim'
 Plug 'rbong/vim-flog'
 Plug 'segeljakt/vim-silicon'
+
+"Themes
 Plug 'nyoom-engineering/oxocarbon.nvim'
 Plug '0xstepit/flow.nvim'
 Plug 'scottmckendry/cyberdream.nvim'
+Plug 'srcery-colors/srcery-vim'
+Plug 'navarasu/onedark.nvim'
+Plug 'EdenEast/nightfox.nvim' " Vim-Plug
+Plug 'morhetz/gruvbox'
 
 " vimtex and its config
 Plug 'lervag/vimtex'
