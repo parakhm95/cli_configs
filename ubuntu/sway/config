@@ -267,8 +267,8 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 bindsym $mod+Ctrl+h workspace prev_on_output
 bindsym $mod+Ctrl+l workspace next_on_output
-bindsym $mod+Ctrl+greater move workspace to output right
-bindsym $mod+Ctrl+less move workspace to output left
+bindsym $mod+Ctrl+period move workspace to output right
+bindsym $mod+Ctrl+comma move workspace to output left
 bindsym $mod+Ctrl+Up move workspace to output up
 
 # bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
