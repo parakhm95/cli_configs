@@ -24,3 +24,4 @@ export EDITOR="nvim"
 # PS1="%n@%m %1~ %#"
 PROMPT='%B%F{51}%n@%m%f%b %3d :~$ '
 
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
