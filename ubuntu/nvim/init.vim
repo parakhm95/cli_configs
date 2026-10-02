@@ -40,6 +40,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'branch': 'master'}
 Plug 'nvim-telescope/telescope.nvim', { 'branch': 'master' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' }
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 " Plug 'bling/vim-bufferline'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-treesitter/nvim-treesitter-context' 

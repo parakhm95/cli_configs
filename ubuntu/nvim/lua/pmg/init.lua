@@ -10,3 +10,4 @@ require("pmg.alphanvim")
 require("pmg.telescope")
 require("pmg.flow")
 require("pmg.nightfox")
+require("bufferline").setup{}
