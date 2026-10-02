@@ -316,3 +316,6 @@ focus_wrapping workspace
 # notification manager
 exec swaync
 bindsym $mod+Shift+n exec swaync-client -t -sw
+
+# way displays
+exec way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1
