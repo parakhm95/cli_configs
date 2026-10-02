@@ -1,16 +1,34 @@
+" shows numbers in the left column
 set number
 
 " syntax on
+
+" make tabs 4 spaces
 set tabstop=4 softtabstop=4
 set shiftwidth=4
+
+" make tabs into 4 spaces
 set expandtab
+
+" auto indent smartly
 set smartindent
+
 " set relativenumber
+
+" make 8 lines always visible
 set scrolloff=8
+
+" enable 24 bit colors
 set termguicolors
+
+" Use treesitter for folding
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
-set nofoldenable                     " Disable folding at startup.
+
+" Disable folding at startup
+set nofoldenable
+
+" case insensitive searching unless capital letters are used
 set ignorecase smartcase
 
 call plug#begin()
