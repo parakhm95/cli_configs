@@ -65,7 +65,7 @@ Plug 'EdenEast/nightfox.nvim' " Vim-Plug
 Plug 'morhetz/gruvbox'
 
 " vimtex and its config
-Plug 'lervag/vimtex'
+Plug 'lervag/vimtex', {'tag': 'v2.15'}
 let maplocalleader = ","
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_matchparen_enabled = 0
