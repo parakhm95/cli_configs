@@ -96,6 +96,7 @@ let mapleader=' '
 " nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <C-p> <cmd>Telescope find_files<cr>
 nnoremap <leader>/ <cmd>Telescope live_grep<cr>
+nnoremap <leader>. <cmd>Telescope resume<cr>
 " nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>b <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
